@@ -40,7 +40,9 @@ def main():
         try:
             text = input("What is the text to count?\n")
         except EOFError:
-            return
+            text = ""
+        else:
+            text += "\n"  # only runs if NO exception occurred
     elif argc == 2:
         text = sys.argv[1]
     else:
