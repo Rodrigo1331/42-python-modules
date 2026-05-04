@@ -37,7 +37,10 @@ def main():
     argc = len(sys.argv)
 
     if argc == 1:
-        return
+        try:
+            text = input("What is the text to count?\n")
+        except EOFError:
+            return
     elif argc == 2:
         text = sys.argv[1]
     else:
