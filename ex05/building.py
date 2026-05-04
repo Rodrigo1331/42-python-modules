@@ -42,7 +42,7 @@ def main():
         except EOFError:
             text = ""
         else:
-            text += "\n"  # only runs if NO exception occurred
+            text += "\n"
     elif argc == 2:
         text = sys.argv[1]
     else:
