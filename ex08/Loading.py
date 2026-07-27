@@ -6,7 +6,7 @@ def ft_tqdm(lst: range):
     total = len(lst)
     width = os.get_terminal_size().columns
 
-    """space for text --> 333/333"""
+    """ space for text --> 333/333 """
     bar_size = width - 30
 
     for i, item in enumerate(lst):
