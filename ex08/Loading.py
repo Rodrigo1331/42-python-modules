@@ -2,6 +2,7 @@ import os
 
 
 def ft_tqdm(lst: range):
+    """Progress bar generator that mimics the basic behavior of tqdm."""
     total = len(lst)
     width = os.get_terminal_size().columns
 

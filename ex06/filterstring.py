@@ -1,7 +1,9 @@
 import sys
 from ft_filter import ft_filter
 
+
 def main():
+    """Verify arguments. And call ft_filter()"""
     try:
         if len(sys.argv) != 3:
             raise AssertionError("the arguments are bad")
@@ -13,13 +15,17 @@ def main():
             raise AssertionError("the arguments are bad")
 
         words = S.split()
-        check_len = lambda word: len(word) > N  #lambda is a temp function
+
+        def check_len(word):
+            """Check if length is bigger than N"""
+            return len(word) > N
         result = [word for word in ft_filter(check_len, words)]
-        
+
         print(result)
 
     except AssertionError as e:
         print(f"AssertionError: {e}")
+
 
 if __name__ == "__main__":
     main()

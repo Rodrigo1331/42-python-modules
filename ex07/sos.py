@@ -17,6 +17,7 @@ NESTED_MORSE = {
 
 
 def main():
+    """Translate text to Morse code"""
     try:
         assert len(sys.argv) == 2
 
